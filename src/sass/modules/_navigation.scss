@@ -1,0 +1,35 @@
+// Main Navigation
+nav.main-nav {
+  text-align: right;
+
+  a {
+    display: inline-block;
+    padding-right: 3.0rem;
+    color: $head-link-color;
+    width: 100%;
+    @include respond-to('sm') { width: auto; }
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $head-link-color-hover;
+      transition: color 0.5s ease-out;
+    }
+  }
+}
+
+
+// Side navigation
+aside.side-nav {
+  a {
+    display: block;
+    width: 100%;
+    padding-bottom: 2.0rem;
+    color: $side-link-color;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $side-link-color-hover;
+      transition: color 0.5s ease-out;
+    }
+  }
+}
