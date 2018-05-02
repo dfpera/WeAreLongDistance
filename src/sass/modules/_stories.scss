@@ -14,6 +14,8 @@
 
     &.text {
       background: $pale-yellow;
+      border-right: 15px solid $white;
+      border-bottom: 15px solid $white;
     }
 
     // Search and tags
@@ -350,6 +352,27 @@
             font-family: inherit;
             line-height: 1.8rem;
             margin: 0 2.5rem 1.5rem 2.5rem;
+          }
+
+          p.filter {
+            margin: 0 1.0rem 0rem 0.75rem;
+          }
+
+          .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            margin-right: 0.25rem;
+            margin-top: 0.5rem;
+            background: $tag-color-bg;
+            color: $tag-color-text;
+            border-radius: 4px;
+
+            &:hover, &:focus, &.active {
+              cursor: pointer;
+              background-color: $tag-color-bg-hover;
+              color: $tag-color-text-hover;
+              transition: background-color 0.5s ease-out;
+            }
           }
         }
 
