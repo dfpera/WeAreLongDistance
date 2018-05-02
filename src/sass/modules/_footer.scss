@@ -3,6 +3,6 @@ footer {
   padding-bottom: 1.5rem;
 
   .credit {
-    text-align: right;
+    @include respond-to('xs') { text-align: right; }
   }
 }

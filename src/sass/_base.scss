@@ -1,0 +1,35 @@
+body {
+  background-color: $white;
+  font-family: $roboto-condensed;
+}
+
+h1 {
+  color: $h1-color;
+  font-family: $h1-font;
+}
+
+h2 {
+  color: $h2-color;
+  font-family: $h2-font;
+}
+
+h3 {
+  color: $h3-color;
+  font-family: $h3-font;
+}
+
+// Used for stories
+h4 {
+  color: $h4-color;
+  font-family: $h4-font;
+}
+
+h5 {
+  color: $h5-color;
+  font-family: $h5-font;
+}
+
+p {
+  color: $p-color;
+  font-family: $p-font;
+}

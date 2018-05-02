@@ -1,0 +1,387 @@
+.stories {
+  .grid-sizer, .story {
+    width: 25%;
+  }
+
+  .story {
+    position: relative;
+    float: left;
+    padding-right: 15px;
+
+    &.text {
+      background: $pale-yellow;
+    }
+
+    // Search and tags
+    &.filter {
+      .tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin-right: 0.25rem;
+        margin-top: 0.5rem;
+        background: $tag-color-bg;
+        color: $tag-color-text;
+        border-radius: 4px;
+
+        &:hover, &:focus, &.active {
+          cursor: pointer;
+          background-color: $tag-color-bg-hover;
+          color: $tag-color-text-hover;
+          transition: background-color 0.5s ease-out;
+        }
+      }
+      .btn.btn-link {
+        display: inline-block;
+      }
+    }
+
+    // Image stories
+    .controls-img {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      transition: opacity 0.5s ease-out;
+
+      &:hover, &:focus {
+        opacity: 1.0;
+        transition: opacity 0.5s ease-out;
+      }
+
+      .username,
+      .social,
+      .tags {
+        position: absolute;
+      }
+
+      .username {
+        left: 1.5rem;
+        top: 2.0rem;
+        font-size: rem-calc(14);
+        color: $white;
+      }
+
+      .tags {
+        bottom: 1.0rem;
+        left: 1.5rem;
+        right: 1.0rem;
+        color: $white;
+        font-size: rem-calc(14);
+      }
+
+      .social {
+        top: 2.0rem;
+        right: 1.0rem;
+        left: 1.0rem;
+        height: 2.0rem;
+        text-align: right;
+
+        > a {
+          position: relative;
+          display: inline-block;
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        > a:before {
+          content: "";
+          position: absolute;
+          display: block;
+          background-size: 1.25rem;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+        > a.love:before {
+          background-image: url('/img/Love-Outline-Yellow.png');
+        }
+
+        > a.love:hover:before,
+        > a.love:focus:before {
+          background-image: url('/img/Love-Yellow.png');
+        }
+      }
+    }
+
+    .controls-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 15px;
+      right: 15px;
+      transition: opacity 0.5s ease-out;
+
+      .username,
+      .social,
+      .tags {
+        position: absolute;
+      }
+
+      .username {
+        left: 1.5rem;
+        top: 2.0rem;
+        font-size: rem-calc(14);
+      }
+
+      .tags {
+        bottom: 1.0rem;
+        left: 1.5rem;
+        right: 1.0rem;
+        font-size: rem-calc(14);
+      }
+
+      .social {
+        top: 2.0rem;
+        right: 1.0rem;
+        left: 1.0rem;
+        height: 2.0rem;
+        text-align: right;
+
+        > a {
+          position: relative;
+          display: inline-block;
+          height: 1.25rem;
+          width: 1.25rem;
+        }
+
+        > a:before {
+          content: "";
+          position: absolute;
+          display: block;
+          background-size: 1.25rem;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+        > a.love:before {
+          background-image: url('/img/Love-Outline-Yellow.png');
+        }
+
+        > a.love:hover:before,
+        > a.love:focus:before {
+          background-image: url('/img/Love-Yellow.png');
+        }
+      }
+    }
+
+    // Image story
+    figure {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      figcaption {
+
+        width: 100%;
+      }
+    }
+
+    // Text story
+    .text {
+      padding-top: 1.0rem;
+
+      h4 {
+        margin: 3.75rem 1.0rem 1.0rem 1.5rem;
+      }
+
+      p {
+        font-family: inherit;
+        line-height: 1.6rem;
+        margin: 0 1.0rem 5.0rem 1.5rem;
+      }
+    }
+
+    // Modal
+    .postModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: transparentize($color: $black, $amount: 0.5);
+      overflow-y: scroll;
+      z-index: 1000;
+
+      .post {
+        width: 90%;
+        max-width: 600px;
+        margin-top: 2.0rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.0rem;
+        background: $white;
+
+        .head {
+          position: relative;
+
+          .poster {
+            padding-top: 1.5rem;
+            margin-left: 1.5rem;
+            padding-bottom: 0.75rem;
+            font-family: $roboto-mono;
+            font-size: rem-calc(18);
+            color: $yellow;
+
+            img {
+              border-radius: 50%;
+              height: 2.0rem;
+              width: 2.0rem;
+            }
+          }
+
+          .social {
+            position: absolute;
+            top: 2.0rem;
+            right: 2.0rem;
+            left: 1.0rem;
+            height: 2.0rem;
+            text-align: right;
+
+            > a {
+              position: relative;
+              display: inline-block;
+              height: 1.25rem;
+              width: 1.25rem;
+            }
+
+            > a:before {
+              content: "";
+              position: absolute;
+              display: block;
+              background-size: 1.25rem;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+
+            > a.love:before {
+              background-image: url('/img/Love-Outline-Purple.png');
+              left: -0.2rem;
+              right: 0.2rem;
+            }
+
+            > a.love:hover:before,
+            > a.love:focus:before {
+              background-image: url('/img/Love-Yellow.png');
+            }
+
+            > a.map:before {
+              background-image: url('/img/Map-Purple.png');
+            }
+
+            > a.map:hover:before,
+            > a.map:focus:before {
+              background-image: url('/img/Map-Yellow.png');
+            }
+
+            > a.share:before {
+              background-image: url('/img/Share-Purple.png');
+            }
+
+            > a.share:hover:before,
+            > a.share:focus:before {
+              background-image: url('/img/Share-Yellow.png');
+            }
+          }
+        }
+
+        figure {
+          position: relative;
+          > figcaption {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+
+            a.tag {
+              display: inline-block;
+              padding: 0.25rem 0.5rem;
+              margin-right: 0.25rem;
+              margin-top: 0.5rem;
+              background: $tag-color-bg;
+              color: $tag-color-text;
+              border-radius: 4px;
+
+              &:hover, &:focus {
+                cursor: pointer;
+                background-color: $tag-color-bg-hover;
+                color: $tag-color-text-hover;
+                transition: background-color 0.5s ease-out;
+              }
+            }
+          }
+        }
+
+        .text {
+          font-family: Helvetica, Arial, sans-serif;
+          padding: 1.0rem 1.5rem;
+
+          h4 {
+            margin: 0 2.5rem 1.0rem 2.5rem;
+          }
+
+          p {
+            font-family: inherit;
+            line-height: 1.8rem;
+            margin: 0 2.5rem 1.5rem 2.5rem;
+          }
+        }
+
+        .comments {
+          font-family: Helvetica, Arial, sans-serif;
+          padding: 1.0rem;
+
+          span.poster {
+            font-weight: bold;
+            color: $yellow;
+          }
+
+          p {
+            font-family: inherit;
+            margin-bottom: 0rem;
+            padding-left: 1.0rem;
+
+            .user, .poster {
+              letter-spacing: 1px;
+            }
+
+            &.subject, &.stats {
+              margin-bottom: 1.0rem;
+            }
+          }
+
+          form {
+            padding-top: 1.5rem;
+            margin-right: 0.75rem;
+            margin-left: 0.75rem;
+
+            input[type="text"] {
+              border-color: $yellow;
+              border-radius: 0;
+              border-width: 2px;
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* clear fix */
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

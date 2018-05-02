@@ -1,11 +1,53 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto+Mono:400,700');
+
+$roboto-mono: 'Roboto Mono', monospace;
+$roboto-condensed: 'Roboto Condensed', sans-serif;
+
 // Colors
-$light-blue: #2699FB;
-$black: #000;
+$black: #2B2B3B;
+$purple: #51526F;
+$deep-blue: #5B7A90;
+$pale-blue: #B6CCD9;
+$pale-yellow: #E1E2BD;
+$deep-yellow: #CECD89;
+$yellow: #DACB56;
+$white: #FAFAFA;
+$disabled-grey: #d8d8d8;
 
 // Sidebar
-$side-link-color: $light-blue;
-$side-link-color-hover: $black;
+$side-link-color: $deep-blue;
+$side-link-color-hover: $yellow;
 
 // Header
-$head-link-color: $light-blue;
-$head-link-color-hover: $black;
+$head-link-color: $black;
+$head-link-color-hover: $yellow;
+
+// Button
+$btn-color-disabled: transparentize($yellow, .5);
+$btn-color: $yellow;
+$btn-color-text: $white;
+$btn-color-hover: $pale-blue;
+
+// Tag
+$tag-color-bg: $yellow;
+$tag-color-text: $white;
+$tag-color-text-hover: $white;
+$tag-color-bg-hover: $purple;
+
+
+
+//Typography
+$base-font-size: 16;
+$h1-color: $black;
+$h1-font: $roboto-mono;
+$h2-color: $black;
+$h2-font: $roboto-mono;
+$h3-color: $black;
+$h3-font: $roboto-condensed;
+$h4-color: $black;
+$h4-font: $roboto-condensed;
+$h5-color: $black;
+$h5-font: $roboto-condensed;
+$p-color: $black;
+$p-font: $roboto-condensed;
