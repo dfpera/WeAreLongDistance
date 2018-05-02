@@ -3,6 +3,10 @@
     width: 25%;
   }
 
+  .story.story-full-width {
+    width: 100%;
+  }
+
   .story {
     position: relative;
     float: left;
@@ -29,9 +33,20 @@
           color: $tag-color-text-hover;
           transition: background-color 0.5s ease-out;
         }
+
+        &.hide {
+          display: none;
+        }
       }
       .btn.btn-link {
         display: inline-block;
+        color: $yellow;
+
+        &:hover, &:focus {
+          text-decoration: none;
+          color: $purple;
+          transition: background-color 0.5s ease-out;
+        }
       }
     }
 
@@ -365,13 +380,6 @@
             padding-top: 1.5rem;
             margin-right: 0.75rem;
             margin-left: 0.75rem;
-
-            input[type="text"] {
-              border-color: $yellow;
-              border-radius: 0;
-              border-width: 2px;
-              background: $white;
-            }
           }
         }
       }

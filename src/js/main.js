@@ -53,4 +53,20 @@ $(function() {
       $grid.isotope({ filter: ".filter, ." + filterValue });
     }
   });
+
+  $(".filter #searchTag").on("input", function() {
+    $(".filter .tag").removeClass("hide");
+    if ($(this).val() == "") {
+      $(".filter .tag").removeClass("hide");
+    } else {
+      var filterValue = $(this).val()
+      $(".filter .tag").each(function(index) {
+        if ($(this).attr("data-filter") == filterValue) {
+
+        } else {
+          $(this).addClass("hide");
+        }
+      });
+    }
+  });
 });
