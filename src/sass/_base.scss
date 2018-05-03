@@ -16,11 +16,14 @@ h2 {
   font-weight: 400;
   color: $h2-color;
   font-family: $h2-font;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
   color: $h3-color;
   font-family: $h3-font;
+  margin-top: 3.0rem;
+  margin-bottom: 1.0rem;
 }
 
 // Used for stories
@@ -54,5 +57,38 @@ p {
 
   .section {
     margin-bottom: 10.0rem;
+  }
+
+  p.description {
+    margin-top: 3.0rem;
+  }
+
+  figure {
+    margin-bottom: 1.5rem;
+
+    img {
+      border: $deep-blue 1px solid;
+    }
+
+    figcaption {
+      text-align: center;
+    }
+  }
+}
+
+
+
+.ldrButton {
+  background: $yellow;
+  color: $white;
+  display: inline-block;
+  padding: 0.75rem 3.0rem;
+  border-radius: 2px;
+
+  &:focus, &:hover, &.active {
+    color: $white;
+    background-color: $purple;
+    transition: background-color 0.5s ease-out;
+    text-decoration: none;
   }
 }
