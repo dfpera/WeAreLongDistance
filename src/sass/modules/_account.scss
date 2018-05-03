@@ -1,0 +1,56 @@
+.introduction {
+  text-align: center;
+  margin-bottom: 3.0rem;
+
+  h1 {
+    margin-bottom: 3.0rem;
+  }
+}
+
+.partnerLeft, .partnerRight {
+  margin-bottom: 5.0rem;
+
+  a {
+    color: $yellow;
+
+    img {
+      height: 2.0rem;
+      width: 2.0rem;
+    }
+
+    &:focus, &:hover, .active {
+      color: $purple;
+      text-decoration: none;
+      transition: color 0.5s ease-out;
+    }
+  }
+}
+
+.partnerLeft {
+  text-align: right;
+}
+
+.accountTabs {
+  text-align: center;
+  a {
+    background: $yellow;
+    color: $white;
+    display: inline-block;
+    padding: 0.75rem 3.0rem;
+    border-radius: 2px;
+    margin: 0 0.75rem 2.0rem;
+
+    &:focus, &:hover, &.active {
+      background-color: $purple;
+      transition: background-color 0.5s ease-out;
+      text-decoration: none;
+    }
+  }
+}
+
+.accountContent {
+  padding: 0 0 5.0rem 0;
+  > .map, > .posts, > .loved {
+    display: none;
+  }
+}

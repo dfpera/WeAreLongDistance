@@ -20,6 +20,9 @@ nav.main-nav {
 
 // Side navigation
 aside.side-nav {
+  position: fixed;
+  top: 14.5rem;
+
   a {
     display: block;
     width: 100%;

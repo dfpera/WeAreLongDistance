@@ -4,11 +4,16 @@ body {
 }
 
 h1 {
+  font-size: rem-calc(30);
+  font-weight: bold;
   color: $h1-color;
   font-family: $h1-font;
+  margin-bottom: 2.0rem;
 }
 
 h2 {
+  font-size: rem-calc(38);
+  font-weight: 400;
   color: $h2-color;
   font-family: $h2-font;
 }
@@ -30,6 +35,24 @@ h5 {
 }
 
 p {
+  line-height: 1.8rem;
   color: $p-color;
   font-family: $p-font;
+}
+
+.about {
+  padding-top: 5.0rem;
+
+  .banner {
+    margin-bottom: 3.0rem;
+  }
+
+  .definition {
+    font-weight: bold;
+    margin-top: 8.0rem;
+  }
+
+  .section {
+    margin-bottom: 10.0rem;
+  }
 }

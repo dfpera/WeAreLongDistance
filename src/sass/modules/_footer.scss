@@ -4,5 +4,15 @@ footer {
 
   .credit {
     @include respond-to('xs') { text-align: right; }
+
+    a {
+      color: $yellow;
+
+      &:hover, &:focus {
+        text-decoration: none;
+        color: $purple;
+        transition: color 0.5s ease-out;
+      }
+    }
   }
 }

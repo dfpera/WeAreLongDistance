@@ -69,4 +69,42 @@ $(function() {
       });
     }
   });
+
+  $(".accountTabs .timelineBut").on("click", function(event) {
+    event.preventDefault();
+    $(".accountContent > div").slideUp(500);
+    $(".accountTabs a").removeClass("active");
+
+    $(".accountContent div.timeline").delay(500).slideDown(500);
+    $(this).addClass("active");
+  });
+
+  $(".accountTabs .mapBut").on("click", function(event) {
+    event.preventDefault();
+    $(".accountContent > div").slideUp(500);
+    $(".accountTabs a").removeClass("active");
+
+    $(".accountContent div.map").delay(500).slideDown(500);
+    $(this).addClass("active");
+  });
+
+  $(".accountTabs .postsBut").on("click", function(event) {
+    event.preventDefault();
+    $(".accountContent > div").slideUp(500);
+    $(".accountTabs a").removeClass("active");
+
+    $(".accountContent div.posts").delay(500).slideDown(500);
+    $(this).addClass("active");
+    $grid.delay(1200).isotope('layout');
+  });
+
+  $(".accountTabs .lovedBut").on("click", function(event) {
+    event.preventDefault();
+    $(".accountContent > div").slideUp(500);
+    $(".accountTabs a").removeClass("active");
+
+    $(".accountContent div.loved").delay(500).slideDown(500);
+    $(this).addClass("active");
+    $grid.delay(1200).isotope('layout');
+  });
 });
