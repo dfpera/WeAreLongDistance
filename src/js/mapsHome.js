@@ -1,3 +1,5 @@
+var map;
+
 function initialize() {
   var   LatLng = google.maps.LatLng,
         LatLngBounds = google.maps.LatLngBounds;
@@ -5,15 +7,24 @@ function initialize() {
   var p1 = new LatLng(37.5665, 126.9780);
   var p2 = new LatLng(49.2827, -123.1207);
 
+  var p3 = new LatLng(40.7128, -74.0060);
+  var p4 = new LatLng(34.0522, -118.2437);
+
+  var p5 = new LatLng(48.8566, 2.3522);
+  var p6 = new LatLng(43.6532, -79.3832);
+
+  var p7 = new LatLng(40.4173, -82.9071);
+  var p8 = new LatLng(-33.8688, 151.2095);
+
   var bounds = new LatLngBounds();
   bounds.extend(p1);
   bounds.extend(p2);
 
-  var map = new google.maps.Map(
+  map = new google.maps.Map(
     document.getElementById("map"), {
-      center: bounds.getCenter(),
-      zoom: 3,
-      zoomControl: true,
+      center: {lat: 21.936169288840357, lng: 161.81837774057533},
+      zoom: 2,
+      zoomControl: false,
       mapTypeControl: false,
       scaleControl: true,
       streetViewControl: false,
@@ -328,12 +339,54 @@ function initialize() {
     strokeOpacity: 0.6,
     strokeColor: "white"
   });
+  var straightPoly2 = new google.maps.Polyline({
+    map:map,
+    path: [p3, p4],
+    strokeOpacity: 0.6,
+    strokeColor: "white"
+  });
+  var straightPoly3 = new google.maps.Polyline({
+    map:map,
+    path: [p5, p6],
+    strokeOpacity: 0.6,
+    strokeColor: "white"
+  });
+  var straightPoly4 = new google.maps.Polyline({
+    map:map,
+    path: [p7, p8],
+    strokeOpacity: 0.6,
+    strokeColor: "white"
+  });
   var markerP1 = new google.maps.Marker({
     position: p1,
     map:map
   });
   var markerP2 = new google.maps.Marker({
     position: p2,
+    map:map
+  });
+  var markerP3 = new google.maps.Marker({
+    position: p3,
+    map:map
+  });
+  var markerP4 = new google.maps.Marker({
+    position: p4,
+    map:map
+  });
+  var markerP5 = new google.maps.Marker({
+    position: p5,
+    map:map
+  });
+  var markerP6 = new google.maps.Marker({
+    position: p6,
+    map:map
+  });
+  var markerP7 = new google.maps.Marker({
+    position: p7,
+    map:map
+  });
+  var markerP8 = new google.maps.Marker({
+    position: p8,
     map:map
   });
 }
